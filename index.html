@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffcae4">
+  <title>Petualangan FAYA - Belajar Berhitung & Membaca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="scene" aria-hidden="true"></div>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-star">★</span><span>Petualangan <b>FAYA</b></span></div>
+      <div class="top-actions">
+        <button id="soundBtn" class="icon-btn" aria-label="Suara">🔊</button>
+        <button id="homeBtn" class="icon-btn" aria-label="Beranda">🏠</button>
+      </div>
+    </header>
+
+    <section id="homeScreen" class="screen active">
+      <div class="hero">
+        <div class="eyebrow">DUNIA BELAJAR YANG MENYENANGKAN</div>
+        <h1>Hai FAYA!<br><span>Ayo bermain & belajar!</span></h1>
+        <p>Petualangan seru menanti. Pilih dunia yang ingin FAYA jelajahi!</p>
+        <div class="avatar" aria-label="Karakter FAYA">👧🏻</div>
+      </div>
+      <div class="menu-grid">
+        <button class="menu-card math" data-menu="math">
+          <span class="card-art">🔢</span><span class="card-title">GAME BERHITUNG</span>
+          <span class="card-sub">Angka • Tambah • Kurang</span><span class="card-arrow">Ayo main →</span>
+        </button>
+        <button class="menu-card read" data-menu="read">
+          <span class="card-art">📚</span><span class="card-title">GAME MEMBACA</span>
+          <span class="card-sub">Huruf A–Z • Baca kata</span><span class="card-arrow">Ayo belajar →</span>
+        </button>
+      </div>
+      <div class="progress-strip"><span>🌟 Bintang FAYA</span><strong id="totalStars">0</strong><span class="progress-note">Terus semangat, FAYA!</span></div>
+    </section>
+
+    <section id="levelsScreen" class="screen">
+      <button class="back-btn" id="backHome">← Beranda</button>
+      <div class="section-heading"><div class="eyebrow" id="levelEyebrow">PILIH PETUALANGAN</div><h2 id="levelTitle">Game Berhitung</h2><p id="levelDescription">Pilih level yang ingin dimainkan.</p></div>
+      <div id="levelGroups" class="level-groups"></div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <div class="game-top">
+        <button id="backLevels" class="back-btn">← Level</button>
+        <div class="level-pill" id="levelPill">Level 1</div>
+        <div class="stars-pill">⭐ <span id="gameStars">0</span></div>
+      </div>
+      <div class="game-card">
+        <div class="game-bubble" id="gameBubble">🌈</div>
+        <div class="question-label" id="questionLabel">Ayo belajar bersama!</div>
+        <h2 id="questionText">FAYA, siap bermain?</h2>
+        <div id="visualQuestion" class="visual-question"></div>
+        <div id="answerOptions" class="answer-options"></div>
+        <div id="feedback" class="feedback" role="status"></div>
+        <button id="nextBtn" class="primary-btn hidden">Lanjutkan →</button>
+      </div>
+      <div class="game-footer">Tidak apa-apa kalau belum benar. Yuk, coba lagi! 💖</div>
+    </section>
+
+    <section id="winScreen" class="screen">
+      <div class="win-card">
+        <div class="confetti">🎉 ✨ 🌟 ✨ 🎉</div>
+        <div class="win-avatar">👧🏻</div>
+        <h1>Hebat sekali, FAYA!</h1>
+        <p id="winText">FAYA berhasil menyelesaikan level!</p>
+        <div class="win-stars" id="winStars">⭐⭐⭐</div>
+        <div class="win-actions"><button id="retryBtn" class="secondary-btn">↻ Main lagi</button><button id="continueBtn" class="primary-btn">Level berikutnya →</button></div>
+        <button id="winLevelsBtn" class="text-btn">Kembali ke pilihan level</button>
+      </div>
+    </section>
+  </main>
+  <footer>Game edukasi untuk Fuzna Anjari Ilyana Atmojo • FAYA 💕</footer>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
